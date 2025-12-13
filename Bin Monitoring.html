@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin Monitoring</title>
+
+    <link rel="stylesheet" href="Bin%20Monitoring.css">
+</head>
+
+<body>
+      <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-title">
+            WasteMon
+            <span class="subtitle">Admin Panel</span>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a class="menu-item" href="dashboard.html">Dashboard</a>
+            <a class="menu-item" href="analytics.html">Analytics</a>
+            <a class="menu-item" href="truck%20tracking.html">Truck tracking</a>
+            <a class="menu-item active" href="Bin%20Monitoring.html">Bin Monitoring</a>
+            <a class="menu-item" href="settings.html">Settings</a>
+        </nav>
+
+        <button class="logout-btn">Log Out</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Header -->
+        <header class="header">
+            <div class="date-info">
+                <div class="date" id="current-date">Tuesday, 23 July 2024</div>
+                <div class="time" id="current-time">11:45:00 AM</div>
+            </div>
+
+            <div class="user-info">
+                <div class="notification">
+                    🔔
+                    <span class="notif-count">0</span>    
+                </div>
+               <div class="profile-picture">                   
+                    <div class="profile-pic" id="profile-pic"></div>
+                </div>
+                <div>
+                    <div class="username" id="username">Alex Johnson</div>
+                    <div class="role">Administrator</div>
+                </div>
+            </div>
+        </header>
+
+<div class="container">
+
+    <!-- TOP STATS -->
+    <div class="stats-row">
+        <div class="stat-box">
+            <p class="stat-title">Total Bins</p>
+            <h2 class="stat-value">0</h2>
+        </div>
+
+        <div class="stat-box">
+            <p class="stat-title">Bins Needing Attention</p>
+            <h2 class="stat-value yellow">0</h2>
+        </div>
+
+        <div class="stat-box">
+            <p class="stat-title">Average Fill Level</p>
+            <h2 class="stat-value">0%</h2>
+        </div>
+    </div>
+
+    <!-- FILTERS + CONTENT GRID -->
+    <div class="content-row">
+
+        <!-- LEFT AREA -->
+        <div class="left-box">
+
+            <!-- FILTERS -->
+            <div class="filters">
+                <input type="text" placeholder="Search by Bin ID..." class="filter-input">
+                <select class="filter-select">
+                    <option>All Bin Types</option>
+                </select>
+                <select class="filter-select">
+                    <option>All Statuses</option>
+                </select>
+            </div>
+
+            <!-- LEGEND -->
+            <div class="legend">
+                <span><span class="dot green"></span> Normal</span>
+                <span><span class="dot yellow"></span> Warning</span>
+                <span><span class="dot red"></span> Critical</span>
+                <span><span class="dot gray"></span> Offline</span>
+            </div>
+
+            <!-- MAP -->
+            <div class="map-box">
+                Interactive Map Placeholder
+            </div>
+
+        </div>
+
+        <!-- RIGHT BIN LIST -->
+        <div class="right-box">
+
+            <div class="list-header">
+                <h3>Bin List</h3>
+                <span class="list-count">Showing 0 of 0</span>
+            </div>
+
+            <div class="bin-list">
+
+                <div class="bin-item">
+                    <input type="checkbox" checked>
+                    <div class="bin-info">
+                        <h4>BIN-01</h4>
+                        <p>Downtown - 123 Main St</p>
+                    </div>
+                    <div class="bin-level yellow">88%</div>
+                    <span class="status-dot yellow"></span>
+                </div>
+
+                <div class="bin-item">
+                    <input type="checkbox">
+                    <div class="bin-info">
+                        <h4>BIN-02</h4>
+                        <p>Uptown - 456 Oak Ave</p>
+                    </div>
+                    <div class="bin-level red">95%</div>
+                    <span class="status-dot red"></span>
+                </div>
+
+                <div class="bin-item">
+                    <input type="checkbox">
+                    <div class="bin-info">
+                        <h4>BIN-03</h4>
+                        <p>East Side - 789 Pine Ln</p>
+                    </div>
+                    <div class="bin-level green">34%</div>
+                    <span class="status-dot green"></span>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <button class="bulk-btn">
+                ⚙ Bulk Edit Thresholds
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<script src="shared-auth.js"></script>
+<script src="Bin%20Monitoring.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

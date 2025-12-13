@@ -1,0 +1,63 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+/* Background */
+.bg-dark-main {
+    background: #03160E;
+}
+
+/* Card */
+.login-card {
+    background: #062013;
+    width: 380px;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+/* Inputs */
+.label-text {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.input-box {
+    background: #0b2917;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+.input-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+
+.icon {
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+/* Button */
+.btn-login {
+    background: #00ff85;
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    color: black;
+}
+
+.btn-login:hover {
+    background: #27ff99;
+}

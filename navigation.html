@@ -1,0 +1,37 @@
+<!-- Shared Navigation Component -->
+<nav class="sticky top-0 w-full bg-surface-light dark:bg-surface-dark border-b border-gray-100 dark:border-gray-800 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-2xl text-primary">recycling</span>
+            <h1 class="text-lg font-bold text-text-main-light dark:text-text-main-dark">E-Waste System</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="material-symbols-outlined text-xl text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors" id="theme-toggle">light_mode</button>
+            <button class="material-symbols-outlined text-xl text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors" id="menu-toggle">menu</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 flex justify-around py-3 pb-6 text-text-sub-light dark:text-text-sub-dark z-40">
+    <a href="dashboard.html" class="nav-link flex flex-col items-center gap-1 hover:text-primary transition-colors" data-page="dashboard">
+        <span class="material-symbols-outlined text-2xl">dashboard</span>
+        <span class="text-[10px] font-medium">Dashboard</span>
+    </a>
+    <a href="analytics.html" class="nav-link flex flex-col items-center gap-1 hover:text-primary transition-colors" data-page="analytics">
+        <span class="material-symbols-outlined text-2xl">bar_chart</span>
+        <span class="text-[10px] font-medium">Analytics</span>
+    </a>
+    <a href="Bin%20Monitoring.html" class="nav-link flex flex-col items-center gap-1 hover:text-primary transition-colors" data-page="binmonitoring">
+        <span class="material-symbols-outlined text-2xl">delete_outline</span>
+        <span class="text-[10px] font-medium">Bins</span>
+    </a>
+    <a href="truck%20tracking.html" class="nav-link flex flex-col items-center gap-1 hover:text-primary transition-colors" data-page="tracking">
+        <span class="material-symbols-outlined text-2xl">local_shipping</span>
+        <span class="text-[10px] font-medium">Tracking</span>
+    </a>
+    <a href="settings.html" class="nav-link flex flex-col items-center gap-1 hover:text-primary transition-colors" data-page="settings">
+        <span class="material-symbols-outlined text-2xl">settings</span>
+        <span class="text-[10px] font-medium">Settings</span>
+    </a>
+</div>

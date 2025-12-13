@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="analytics.css">
+</head>
+
+<body>
+     <aside class="sidebar">
+        <div class="sidebar-title">
+            WasteMon
+            <span class="subtitle">Admin Panel</span>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a class="menu-item" href="dashboard.html">Dashboard</a>
+            <a class="menu-item active" href="analytics.html">Analytics</a>
+            <a class="menu-item" href="truck%20tracking.html">Truck tracking</a>
+            <a class="menu-item" href="Bin%20Monitoring.html">Bin Monitoring</a>
+            <a class="menu-item" href="settings.html">Settings</a>
+        </nav>
+
+        <button class="logout-btn">Log Out</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Header -->
+        <header class="header">
+            <div class="date-info">
+                <div class="date" id="current-date">Tuesday, 23 July 2024</div>
+                <div class="time" id="current-time">11:45:00 AM</div>
+            </div>
+
+            <div class="user-info">
+                <div class="notification">
+                    🔔
+                    <span class="notif-count">0</span>    
+                </div>
+          <div class="profile-picture">                   
+                    <div class="profile-pic" id="profile-pic"></div>
+                </div>
+                <div>
+                    <div class="username" id="username">Alex Johnson</div>
+                    <div class="role">Administrator</div>
+                </div>
+            </div>
+        </header>
+
+
+<div class="container">
+
+    <!-- TOP METRICS -->
+    <div class="metrics-row">
+        <div class="metric-box">
+            <p class="metric-title">Total Collection (Today)</p>
+            <h2 class="metric-value">0 tons</h2>
+        </div>
+
+        <div class="metric-box">
+            <p class="metric-title">Weekly Avg. Collection</p>
+            <h2 class="metric-value">0 kg</h2>
+        </div>
+
+        <div class="metric-box">
+            <p class="metric-title">Missed Pickups (Week)</p>
+            <h2 class="metric-value yellow">0</h2>
+        </div>
+
+        <div class="metric-box">
+            <p class="metric-title">Recycling Rate</p>
+            <h2 class="metric-value">0%</h2>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <!-- WASTE TRENDS -->
+        <div class="trend-box">
+            <div class="trend-header">
+                <h3>Waste Generation Trends</h3>
+
+                <div class="tab-group">
+                    <button class="tab active" onclick="this.parentElement.querySelector('.active').classList.remove('active'); this.classList.add('active');">Daily</button>
+                    <button class="tab" onclick="this.parentElement.querySelector('.active').classList.remove('active'); this.classList.add('active');">Weekly</button>
+                    <button class="tab" onclick="this.parentElement.querySelector('.active').classList.remove('active'); this.classList.add('active');">Monthly</button>
+                </div>
+            </div>
+
+            <div class="trend-chart">
+                Line graph placeholder for waste trends
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- REPORTS SECTION -->
+    <div class="report-section">
+        <div class="report-header">
+            <div>
+                <h3>Customizable Reporting</h3>
+            </div>
+        </div>
+        <div class="filters-row">
+
+            <select>
+                <option>Waste Stream Data</option>
+            </select>
+
+            <select>
+                <option>Last 30 Days</option>
+            </select>
+
+            <button class="apply-btn">⚙ Apply Filters</button>
+        </div>
+
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Report Name</th>
+                    <th>Date Generated</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Q1 2025 Cost Analysis</td>
+                    <td>17/10/2025</td>
+                    <td>Cost Analysis</td>
+                    <td class="actions">
+                        👁️  ⬇️  🗑️
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="shared-auth.js"></script>
+<script src="analytics.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

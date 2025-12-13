@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truck Monitoring Dashboard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="truck%20tracking.css" />
+</head>
+<body class="bg-[#06190f] text-white p-6">
+  <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-title">
+            WasteMon
+            <span class="subtitle">Admin Panel</span>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a class="menu-item" href="dashboard.html">Dashboard</a>
+            <a class="menu-item" href="analytics.html">Analytics</a>
+            <a class="menu-item active" href="truck%20tracking.html">Truck tracking</a>
+            <a class="menu-item" href="Bin%20Monitoring.html">Bin Monitoring</a>
+            <a class="menu-item" href="settings.html">Settings</a>
+        </nav>
+
+        <button class="logout-btn">Log Out</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Header -->
+        <header class="header">
+            <div class="date-info">
+                <div class="date" id="current-date">Tuesday, 23 July 2024</div>
+                <div class="time" id="current-time">11:45:00 AM</div>
+            </div>
+
+            <div class="user-info">
+                <div class="notification">
+                    🔔
+                    <span class="notif-count">0</span>    
+                </div>
+                
+               <div class="profile-picture">                   
+                    <div class="profile-pic" id="profile-pic"></div>
+                </div>
+                <div>
+                    <div class="username" id="username">Alex Johnson</div>
+                    <div class="role">Administrator</div>
+                </div>
+            </div>
+        </header>
+
+
+
+    <div class="grid grid-cols-3 gap-6">
+
+        <!-- LIVE MAP -->
+        <div class="col-span-2 card h-[420px]">
+            <h2 class="section-title mb-4">Live Operations Map</h2>
+            <div class="w-full h-[350px] bg-[#1a2e22] rounded-xl grid place-items-center text-gray-400">
+                Large Interactive Map Placeholder
+            </div>
+        </div>
+
+        <!-- TRUCK RIGHT PANEL -->
+        <div class="card h-[420px]">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="section-title" id="truck-title">Truck-001</h2>
+                <span class="cursor-pointer text-xl">✖</span>
+            </div>
+
+            <div id="truck-status" class="status-tag mb-4 bg-green-600/20 text-green-400">On Route</div>
+
+            <div class="field">
+                <span>Driver</span>
+                <div class="value flex items-center gap-3" id="driver-value">
+                    <div class="profile-pic"></div>
+                </div>
+            </div>
+
+            <div class="field">
+                <span>Route</span>
+                <div class="value" id="route-value"></div>
+            </div>
+
+            <div class="field">
+                <span>Last Reported</span>
+                <div class="value" id="last-reported-value"></div>
+            </div>
+        </div>
+
+        <!-- ALL TRUCKS TABLE -->
+        <div class="card col-span-3 mt-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="section-title">All Trucks</h2>
+
+                <div class="flex items-center gap-2">
+                    <input type="text" placeholder="Search truck..." class="search-box" />
+                </div>
+            </div>
+
+            <table class="truck-table w-full">
+                <thead>
+                    <tr>
+                        <th>TRUCK ID</th>
+                        <th>DRIVER</th>
+                        <th>ROUTE</th>
+                        <th>STATUS</th>
+                        <th>LAST UPDATE</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>T-001</td>
+                        <td>chetan</td>
+                        <td>Route 5 - Downtown</td>
+                        <td><span class="status-green">On Route</span></td>
+                        <td>2 min ago</td>
+                    </tr>
+                    <tr>
+                        <td>T-002</td>
+                        <td>krish</td>
+                        <td>Route 3 - Uptown</td>
+                        <td><span class="status-yellow">Delayed</span></td>
+                        <td>5 min ago</td>
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+
+    <script src="shared-auth.js"></script>
+    <script src="truck%20tracking.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

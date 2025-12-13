@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+     <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-title">
+            WasteMon
+            <span class="subtitle">Admin Panel</span>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a class="menu-item " href="dashboard.html">Dashboard</a>
+            <a class="menu-item" href="analytics.html">Analytics</a>
+            <a class="menu-item" href="truck%20tracking.html">Truck tracking</a>
+            <a class="menu-item" href="Bin%20Monitoring.html">Bin Monitoring</a>
+            <a class="menu-item active" href="settings.html">Settings</a>
+        </nav>
+
+        <button class="logout-btn" >Log Out</button>
+    </aside>
+
+
+<div class="container">
+    <h1 class="title">My Profile</h1>
+
+    <!-- PERSONAL DETAILS -->
+    <section class="card">
+        <h2>Personal Details</h2>
+
+        <div class="profile-section">
+            <div class="profile-photo">
+                <img id="profileImage" src="assets/default-profile.svg" alt="Profile">
+                <input type="file" id="photoUpload" accept="image/*">
+            </div>
+
+            <div class="photo-buttons">
+                <button id="changePhotoBtn">Change Photo</button>
+                <button id="removePhotoBtn" class="danger">Remove Photo</button>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="fullName" placeholder="Full Name">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Email Address">
+            </div>
+        </div>
+    </section>
+
+    <!-- CHANGE PASSWORD -->
+    <section class="card">
+        <h2>Change Password</h2>
+
+        <div class="input-group">
+            <label>Current Password</label>
+            <input type="password" id="currentPassword" placeholder="********">
+        </div>
+
+        <div class="two-col">
+            <div class="input-group">
+                <label>New Password</label>
+                <input type="password" id="newPassword" placeholder="Enter new password">
+            </div>
+
+            <div class="input-group">
+                <label>Confirm New Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm new password">
+            </div>
+        </div>
+    </section>
+
+    <div class="button-row">
+        <button class="cancel">Cancel</button>
+        <button class="update">Update Profile</button>
+    </div>
+
+</div>
+
+<script src="shared-auth.js"></script>
+<script src="settings.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
