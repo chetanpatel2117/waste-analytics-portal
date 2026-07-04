@@ -2,8 +2,8 @@
 -- Import this file in phpMyAdmin to create a local development database with sample data.
 
 -- Drop and recreate database
-DROP DATABASE IF EXISTS `wastemon`;
-CREATE DATABASE `wastemon` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+DROP DATABASE IF EXISTS `BinTrack`;
+CREATE DATABASE `BinTrack` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `wastemon`;
 
 -- Users table (development/testing only)
